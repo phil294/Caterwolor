@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 /**
  * .___.				<br>
  * {o,o}				<br>
@@ -21,7 +23,7 @@ public class Option {
 		this.key = ke;
 		this.defaul = def;
 	}
-	
+
 
 	/* (non-Javadoc)
 	 * @see java.lang.Object#hashCode()

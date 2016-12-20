@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;

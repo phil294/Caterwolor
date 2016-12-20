@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 import java.io.File;
 import java.io.IOException;
 import java.util.Map;
@@ -17,7 +19,7 @@ public class Options {
 
 	private static Ini					ini;
 	private static Map<String, Option>	options;
-	
+
 	public static Map<String, Option> getOptions() {
 		return options;
 	}
