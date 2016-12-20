@@ -1,4 +1,4 @@
-package de.phil294.caterwoler;
+package de.phil294.caterwolor;
 
 import java.awt.FlowLayout;
 import java.awt.GridLayout;

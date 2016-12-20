@@ -1,4 +1,4 @@
-package de.phil294.caterwoler;
+package de.phil294.caterwolor;
 
 import java.awt.Color;
 import java.awt.image.BufferedImage;

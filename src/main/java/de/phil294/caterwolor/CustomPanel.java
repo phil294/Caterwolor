@@ -1,4 +1,4 @@
-package de.phil294.caterwoler;
+package de.phil294.caterwolor;
 
 import java.awt.Dimension;
 import java.awt.Graphics;
