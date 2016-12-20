@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.MouseEvent;

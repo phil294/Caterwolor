@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 
 class Pair<T, U> {
 	private final T	m_first;
@@ -22,9 +24,9 @@ class Pair<T, U> {
 	public U second() {
 		return this.m_second;
 	}
-	
+
 	public int flag() {
 		return this.flag;
 	}
-	
+
 }

@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Graphics;
@@ -13,22 +15,22 @@ import javax.swing.JPanel;
 import javax.swing.KeyStroke;
 
 public class Deprecated extends Canvas {
-	
+
 	private static final long	serialVersionUID		= 7287164612273529048L;
 	private static final int	WIDTH1				= 400;
 	private static final int	HEIGHT1				= 400;
-	
+
 	// -------------------
 	private static final int	EINSTIEGSPUNKTE		= 1;
 	private static final float	FARBTONFAKTOR		= 1.000f;
 	private static final float SAETTIGUNGSFAKTOR = 0.975f;
 	private static final float HELLIGKEITSFAKTOR = 1.010f;
-	
+
 	private static final float	RANDOMIZER			= 0.000f;
 	// -------------------
-	
+
 	private static final Random	random	= new Random();
-	
+
 /*
 	@Override
 	public void paint(Graphics g) {
@@ -62,7 +64,7 @@ public class Deprecated extends Canvas {
 		//	for (int y = 0; y < HEIGHT1; y++) {
 
 		//g.setColor(this.randomColor());
-		
+
 		int x, y, c = -1, d = 0;
 		/* loop, 50000 */for (int i9451 = 0; i9451 < (WIDTH1 * HEIGHT1 * 1000); i9451++) {
 			x = random.nextInt(WIDTH1);
@@ -129,7 +131,7 @@ public class Deprecated extends Canvas {
 			}
 			if (c3 == null)
 				c3 = new Color(0, 0, 0);
-			
+
 			// has to be at least one pixel set next to it! (apart from very first one)
 			if ((-16777216 == a1.getRGB()) && (-16777216 == a2.getRGB()) && (-16777216 == a3.getRGB()) && (-16777216 == b1.getRGB()) && (-16777216 == b3.getRGB()) && (-16777216 == c1.getRGB()) && (-16777216 == c2.getRGB()) && (-16777216 == c3.getRGB())) {
 				if (d >= EINSTIEGSPUNKTE)
@@ -139,22 +141,22 @@ public class Deprecated extends Canvas {
 			c = 0;
 
 			final Color newColor = calculatedRandomColor(a1, a2, a3, b1, b3, c1, c2, c3);
-			
+
 			g.setColor(newColor);
 			colors[x][y] = newColor;
 
 			g.drawLine(x, y, x, y);
-			
+
 		}
 
 		//	}
 		//}
 	}
-	
+
 	private static Color randomColor() {
 		return new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256));
 	}
-	
+
 	private static Color calculatedRandomColor(final Color a1, final Color a2, final Color a3, final Color b1, final Color b3, final Color c1, final Color c2, final Color c3) {
 		int i = 8;
 		if (a1.getRGB() == -16777216)
@@ -201,7 +203,7 @@ public class Deprecated extends Canvas {
 		if (Float.isNaN(green_average))
 			green_average = random.nextInt(256);
 		//System.out.println(i + ", " + blue_average + ", " + red_average + ", " + green_average);
-		
+
 		final Color c = new Color(Math.round(red_average), Math.round(green_average), Math.round(blue_average));
 		//c.get
 		final float[] hsb = Color.RGBtoHSB(c.getRed(), c.getGreen(), c.getBlue(), null);
@@ -213,16 +215,16 @@ public class Deprecated extends Canvas {
 		//System.out.println(hsb[0]);
 		return ret;
 	}
-	
+
 	public static void main(final String[] args) {
 		final JFrame frame = new JFrame();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
+
 		frame.setSize(WIDTH1, HEIGHT1);
 		final JPanel pane = (JPanel) frame.getContentPane();
 		final Canvas canvas = new Deprecated();
 		frame.add(canvas);
-		
+
 		frame.setVisible(true);
 
 		final InputMap iMap = pane.getInputMap();
@@ -230,7 +232,7 @@ public class Deprecated extends Canvas {
 		iMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_R, 0), "R");
 		aMap.put("R", new AbstractAction() {
 			private static final long	serialVersionUID	= 3205299646057459152L;
-			
+
 			@Override
 			public void actionPerformed(final ActionEvent arg0) {
 				frame.remove(canvas);

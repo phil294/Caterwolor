@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 import java.io.IOException;
 
 public class Start {

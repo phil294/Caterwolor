@@ -1,3 +1,5 @@
+package de.phil294.caterwoler;
+
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -31,7 +33,7 @@ public class CustomPanel extends javax.swing.JPanel {
 	}
 
 	public void render(int[] mem) {
-		
+
 		int w, h;
 		double f;
 		double wf = this._WIDTH;
@@ -48,11 +50,11 @@ public class CustomPanel extends javax.swing.JPanel {
 		}
 		w = (int) Math.round(wf);
 		h = (int) Math.round(hf);
-		
+
 		final Image img = this.createImage(new MemoryImageSource(w, h, mem, 0, this._WIDTH));
-		
+
 		final Image img_orig = this.createImage(new MemoryImageSource(this._WIDTH, this._HEIGHT, mem, 0, this._WIDTH));
-		
+
 /*
 		final BufferedImage bi = new BufferedImage(this._WIDTH, this._HEIGHT, BufferedImage.TYPE_INT_ARGB);
 		final Graphics2D g2 = bi.createGraphics();
@@ -61,7 +63,7 @@ public class CustomPanel extends javax.swing.JPanel {
 		this.publish(bi);
  */
 
-		
+
 		this.src = img;
 		this.src_origSize = img_orig;
 		this.repaint();
@@ -73,7 +75,7 @@ public class CustomPanel extends javax.swing.JPanel {
 		if (this.src != null)
 			g.drawImage(this.src, 0, 0, this);
 	}
-	
+
 	public void  saveToDisk() {
 		try {
 			BufferedImage buffi = null;
